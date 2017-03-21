@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>
+					
+				</li>
+				<li>
+					
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="exa/links/cookies.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var li=document.getElementsByTagName("li")[0];
+			var li1=document.getElementsByTagName("li")[1];
+			for(var z=0;z<2;z++){
+				
+				var t=""+z;
+				var g=getCook(t);
+					var r=g.split("---");
+						console.log(r);
+					var html="";
+					html+="<li>"+r[0]+"</li>"
+			}
+			document.body.innerHTML=html;
+		}
+		
+		
+		
+	</script>
+</html>

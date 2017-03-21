@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style >
+			li{
+				list-style: none;
+				border: 1px solid #ccc;
+				float: left;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>
+					<h2>最新电熨斗</h2>
+					<p><img src="../0101html/img/timg.jpg"/></p>
+					<span>222</span>
+					<button>添加到购物车</button>
+				</li>
+				<li>
+					<h2>最新电熨斗2</h2>
+					<p><img src="../0101html/img/timg.jpg"/></p>
+					<span>333</span>
+					<button>添加到购物车</button>
+				</li>
+				<li>
+					<h2>最新电熨斗3</h2>
+					<p><img src="../0101html/img/timg.jpg"/></p>
+					<span>444</span>
+					<button>添加到购物车</button>
+				</li>
+				<li>
+					<h2>最新电熨斗4</h2>
+					<p><img src="../0101html/img/timg.jpg"/></p>
+					<span>555</span>
+					<button>添加到购物车</button>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="cookies.js"></script>
+	<script type="text/javascript">
+	window.onload=function(){
+		var btns=document.getElementsByTagName("button");
+		var lis=document.getElementsByTagName("li");
+		for(var i=0;i<btns.length;i++){
+			btns[i].index=i;
+			btns[i].onclick=function(){
+					for(var j=0;j<lis.length;j++){
+					var x=lis[this.index].getElementsByTagName("h2")[0].innerHTML;
+					var y=lis[this.index].getElementsByTagName("img")[0].src;
+					var z=lis[this.index].getElementsByTagName("span")[0].innerHTML;
+					}
+				var f=x+"---"+y+"---"+z;
+				console.log(f);
+				setCookie(this.index,f,9);
+				
+			}
+			
+			
+		}
+		
+		
+		
+	}
+		
+		
+		
+	</script>
+</html>
